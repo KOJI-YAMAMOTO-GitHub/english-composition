@@ -93,6 +93,7 @@
         ]
 
 
+        //回答確認メソッド
         function check(value) {
             const answer = document.getElementById("answer").value;
 
@@ -102,10 +103,17 @@
             } else {
                 document.getElementById('sound-file-ng').play();
                 document.getElementById('result').innerHTML = 'BAD' + '</br>' + value;
+                //1秒後に回答を読み上げる
+                setTimeout(
+                    function () {
+                        voice(value);
+                    },
+                    "1000"
+                );
             }
         }
 
-
+        //問題変更メソッド
         function change() {
 
             //結果初期化
@@ -120,6 +128,18 @@
             var elem = document.getElementById("btn_check");
             elem.innerHTML = '<p id="btn"' + '" onclick="check(\'' + answerword + '\')"> check </p>';
         }
+
+        //文字列読み上げメソッド
+        function voice(message) {
+            const synthes = new SpeechSynthesisUtterance();
+            synthes.voiceURI = 'native';
+            synthes.volume = 1;
+            synthes.rate = 1;
+            synthes.pitch = 2;
+            synthes.text = message;
+            synthes.lang = 'en-US';
+            speechSynthesis.speak(synthes);
+        }
     </script>
 </head>
 
@@ -127,7 +147,6 @@
     <h1 id="title">瞬間英作文</h1>
     <p id="btn" onclick="change()">question</p>
     <p id="questions"></p>
-    <!-- <input type="text" id="answer" value="" maxlength="100" /></br> -->
     <p id="btn_check"></p>
     <p id="result"></p>
 </body>
