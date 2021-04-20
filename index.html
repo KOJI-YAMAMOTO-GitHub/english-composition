@@ -113,7 +113,6 @@
 
             //JSON数からランダムな配列番号を取得する
             var arrayIndex = Math.floor(Math.random() * json.length);
-            // var question_car = english_word_array[arrayIndex];
             var questionword = json[arrayIndex].question;
             var answerword = json[arrayIndex].answer;
             var element = document.getElementById('questions');
