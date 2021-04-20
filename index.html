@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>瞬間英作文</title>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+    <link rel="stylesheet" href="">
+    <link rel="shortcut icon" href="">
+    <link href="https://fonts.googleapis.com/earlyaccess/kokoro.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet">
+    <audio id="sound-file-ok" preload="auto">
+        <source src="https://soundeffect-lab.info/sound/anime/mp3/correct1.mp3" type="audio/mp3">
+    </audio>
+    <audio id="sound-file-ng" preload="auto">
+        <source src="https://soundeffect-lab.info/sound/anime/mp3/incorrect1.mp3" type="audio/mp3">
+    </audio>
+    <style type="text/css">
+        body {
+            text-align: center;
+            /* font-family: "Nico Moji"; */
+        }
+
+        #title {
+            color: #0051ff;
+            font-size: 8vw;
+            margin: 5px;
+        }
+
+        #question {
+            color: rgb(3, 39, 243);
+        }
+
+        #answer {
+            width: 30vw;
+            height: 30px;
+            text-align: center;
+        }
+
+        #btn {
+            width: 30vw;
+            height: 30px;
+            display: inline-block;
+            padding: 0.5em 1em;
+            text-decoration: none;
+            background: #668ad8;
+            /*ボタン色*/
+            color: #FFF;
+            border-bottom: solid 4px #627295;
+            border-radius: 3px;
+        }
+
+        #btn:active {
+            /*ボタンを押したとき*/
+            -webkit-transform: translateY(4px);
+            transform: translateY(4px);
+            /*下に動く*/
+            box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+            /*影を小さく*/
+            border-bottom: none;
+        }
+
+        @media screen and (min-width: 767px) {
+            /*PC用*/
+        }
+
+        @media screen and (max-width: 767px) {
+            /*タブレット用*/
+        }
+
+        @media screen and (max-width: 479px) {
+            /*スマホ用*/
+        }
+    </style>
+    <script type="text/javascript">
+
+        var json = [
+            {
+                "question": "こんにちは",
+                "answer": "hello",
+            },
+            {
+                "question": "お休み",
+                "answer": "good night",
+            },
+            {
+                "question": "おはよう",
+                "answer": "good morning",
+            }
+        ]
+
+
+        function check(value) {
+            const answer = document.getElementById("answer").value;
+
+            if (answer.toUpperCase() === value.toUpperCase()) {
+                document.getElementById('sound-file-ok').play();
+                document.getElementById('result').innerText = 'GOOD';
+            } else {
+                document.getElementById('sound-file-ng').play();
+                document.getElementById('result').innerHTML = 'BAD' + '</br>' + value;
+            }
+        }
+
+
+        function change() {
+
+            //結果初期化
+            document.getElementById('result').innerText = '';
+
+            //JSON数からランダムな配列番号を取得する
+            var arrayIndex = Math.floor(Math.random() * json.length);
+            // var question_car = english_word_array[arrayIndex];
+            var questionword = json[arrayIndex].question;
+            var answerword = json[arrayIndex].answer;
+            var element = document.getElementById('questions');
+            element.innerHTML = questionword + '</br><input type="text" id="answer" value="" maxlength="100" /></br>';
+            var elem = document.getElementById("btn_check");
+            elem.innerHTML = '<p id="btn"' + '" onclick="check(\'' + answerword + '\')"> check </p>';
+        }
+    </script>
+</head>
+
+<body>
+    <h1 id="title">瞬間英作文</h1>
+    <p id="btn" onclick="change()">question</p>
+    <p id="questions"></p>
+    <!-- <input type="text" id="answer" value="" maxlength="100" /></br> -->
+    <p id="btn_check"></p>
+    <p id="result"></p>
+</body>
+
+</html>
