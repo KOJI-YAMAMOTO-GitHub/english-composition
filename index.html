@@ -40,6 +40,10 @@
             text-align: center;
         }
 
+        #listanswer {
+            color: #FFD400;
+        }
+
         #btn {
             width: 30vw;
             height: 30px;
@@ -449,6 +453,7 @@
 
             //結果初期化
             document.getElementById('result').innerText = '';
+            document.getElementById('list').innerText = '';
 
             //JSON数からランダムな配列番号を取得する
             var arrayIndex = Math.floor(Math.random() * json.length);
@@ -458,19 +463,37 @@
             element.innerHTML = questionword + '</br><input type="text" id="answer" value="" maxlength="100" /></br>';
             var elem = document.getElementById("btn_check");
             elem.innerHTML = '<p id="btn"' + '" onclick="check(\'' + answerword + '\')"> check </p>';
+            var elem = document.getElementById("btn_list");
+            elem.innerHTML = '<p id="btn"' + '" onclick="diplaylist()"> 一覧表示 </p>';
         }
 
         //文字列読み上げメソッド
         function voice(message) {
-            const synthes = new SpeechSynthesisUtterance();
-            synthes.voiceURI = 'native';
-            synthes.volume = 1;
-            synthes.rate = 1;
-            synthes.pitch = 2;
-            synthes.text = message;
-            synthes.lang = 'en-US';
-            speechSynthesis.speak(synthes);
+            var speak = new SpeechSynthesisUtterance();
+            speak.lang = "en-US";
+            speak.text = message;
+            speak.rate = 1;
+            speechSynthesis.speak(speak);
         }
+        function diplaylist() {
+
+            //結果初期化
+            document.getElementById('list').innerText = '';
+
+            //JSON数からランダムな配列番号を取得する
+            var arrayIndex = json.length;
+            var element = document.getElementById('list');
+            var listtext = '';
+
+            for(let i = 0; i < json.length; i++){
+                var questionword = json[i].question;
+                var answerword = '<span id ="listanswer">' + json[i].answer + '</span>';
+                listtext = listtext + questionword + ' : ' + answerword + '</br>';
+            }
+            element.innerHTML = listtext;
+
+        }
+
     </script>
 </head>
 
@@ -480,6 +503,8 @@
     <p id="questions"></p>
     <p id="btn_check"></p>
     <p id="result"></p>
+    <p id="btn_list"></p>
+    <p id="list"></p>
 </body>
 
 </html>
