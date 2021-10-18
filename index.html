@@ -40,7 +40,7 @@
             text-align: center;
         }
 
-        #listanswer {
+        .listanswer {
             color: #FFD400;
         }
 
@@ -83,354 +83,1184 @@
 
         var json = [
             {
-                "question": "恐れ入りますが、年齢を教えてください。",
-                "answer": "May I ask, how old are you?"
+                "answer": "I'm watching your operation.",
+                "question": "私はあなたの操作を見ています。"
             },
             {
-                "question": "ちょっと思ったんだけど、...",
-                "answer": "I was wondering, ..."
+                "answer": "There is a time lag of about thirty seconds.",
+                "question": "30秒くらいのタイムラグがあります。"
             },
             {
-
-                "question": "...について",
-
-                "answer": "Regarding to ..."
-
+                "answer": "Please you don't press Enter until I say YES or OK.",
+                "question": "YESまたはOKと言うまでEnterキーを押さないでください。"
             },
-
             {
-
-                "question": "...はどうですか？",
-
-                "answer": "How about"
-
+                "answer": "I'm sorry. Please again the operation of No.3 in the manual.",
+                "question": "ごめんなさい。 マニュアルのNo.3の操作をもう一度してください。"
             },
-
             {
-
-                "question": "...頂ければ幸いです。",
-
-                "answer": "It would be appreciated ..."
-
+                "answer": "Please scroll up a little.",
+                "question": "少し上にスクロールしてください。"
             },
-
             {
-
-                "question": "Aを2021/03/31に変更してください。",
-
-                "answer": "Kindly shift A to March 31st, 2021."
-
+                "answer": "It is the third from the top.",
+                "question": "上から3つ目です。"
             },
-
             {
-
-                "question": "以下の情報を御覧ください。",
-
-                "answer": "Please kindly find the information below;"
-
+                "answer": "Please ignore the log level is ERROR.",
+                "question": "ログレベルがERRORですが、無視してください。"
             },
-
             {
-
-                "question": "了解しました。(依頼を承諾する時)",
-
-                "answer": "You got it."
-
+                "answer": "I can speak english a little.",
+                "question": "私は少し英語が話せます。"
             },
-
             {
-
-                "question": "以下の質問は如何でしょうか。",
-
-                "answer": "How about below question?"
-
+                "answer": "But I'm not good listening to English.",
+                "question": "しかし私は英語を聞くのが苦手です。"
             },
-
             {
-
-                "question": "謝罪します。",
-
-                "answer": "I apologize."
-
+                "answer": "So Please let me sometimes use chat.",
+                "question": "なので、時々チャットも使わせてください。"
             },
-
             {
-
-                "question": "あなたの質問への答えになっていますか？",
-
-                "answer": "Does this answer your question?"
-
+                "answer": "Let me see.",
+                "question": "そうね。"
             },
-
             {
-
-                "question": "英語で書いてすみません。",
-
-                "answer": "Sorry writing in English."
-
+                "answer": "Let me see liferay.log.",
+                "question": "liferay.logを見せてください。"
             },
-
             {
-
-                "question": "確認して連絡します。",
-
-                "answer": "I will investigate and inform you."
-
+                "answer": "Can you hear me?",
+                "question": "聞こえますか？"
             },
-
             {
-
-                "question": "一方で、",
-
-                "answer": "On the other hand,"
-
+                "answer": "No,You are braking up.",
+                "question": "いいえ、とぎれとぎれです。"
             },
-
             {
-
-                "question": "その場合、",
-
-                "answer": "In the case,"
-
+                "answer": "Could you share the screen？",
+                "question": "画面を共有してもらえますか？"
             },
-
             {
-
-                "question": "打ち合わせメモです。",
-
-                "answer": "Here is a meeting memo."
-
+                "answer": "It's time.Let's get started.",
+                "question": "時間です。始めましょう。"
             },
-
             {
-
-                "question": "まずは、",
-
-                "answer": "First and foremost,"
-
+                "answer": "Thank you so much for today.",
+                "question": "今日はありがとう。"
             },
-
             {
-
-                "question": "どういたしまして。",
-
-                "answer": "Don't mention that."
-
+                "answer": "That's all.",
+                "question": "これで終了です。"
             },
-
             {
-
-                "question": "続けてください。",
-
-                "answer": "Please go a head."
-
+                "answer": "The release work is now finish.",
+                "question": "リリース作業は終了です。"
             },
-
             {
-
-                "question": "ご不明点があれば連絡してください。",
-
-                "answer": "If you confirmation, please let us know."
-
+                "answer": "I think that the startup is now compleate.",
+                "question": "そろそろ起動したかと思います。"
             },
-
             {
-
-                "question": "以下の変更をお願い致します。",
-
-                "answer": "Could you please make the following change?"
-
+                "answer": "I'm looking forward to working with you again.",
+                "question": "また次回もお願い致します。"
             },
-
             {
-
-                "question": "したがって/その為",
-
-                "answer": "Therefore,"
-
+                "answer": "I want to check AAA has not been output to BBB.",
+                "question": "AAAがBBBに出力されていないか確認したい。"
             },
-
             {
-
-                "question": "私は英語が苦手です。",
-
-                "answer": "I'm not good at english language."
-
+                "answer": "one morment please.",
+                "question": "ちょっと待ってください"
             },
-
             {
-
-                "question": "お手数をお掛け致しますが、よろしくお願い致します。",
-
-                "answer": "I'm sorry for incovenience. Thank you for your cooperation."
-
+                "answer": "I'll be back one minitues.",
+                "question": "1分したら戻ります"
             },
-
             {
-
-                "question": "DBのある地域はシンガポールですか？",
-
-                "answer": "Is the region with DB in Singapore?"
-
+                "answer": "Just now, I'm checking.",
+                "question": "今、確認しています。"
             },
-
             {
-
-                "question": "一方で必要な情報は以下の通りです。",
-
-                "answer": "Meanshile, please find flowing required information."
-
+                "answer": "effort",
+                "question": "工数"
             },
-
             {
-
-                "question": "ご確認頂きありがとうございます。",
-
-                "answer": "Thank you for your confirmation."
-
+                "answer": "We come to the conclusion,",
+                "question": "私たちの結論としては、"
             },
-
             {
-
-                "question": "確認します。",
-
-                "answer": "Let me confirm."
-
+                "answer": "relative",
+                "question": "相対的な"
             },
-
             {
-
-                "question": "教えて頂きありがとうございます。",
-
-                "answer": "Thank you for letting me know."
-
+                "answer": "absolute",
+                "question": "絶対的な"
             },
-
             {
-
-                "question": "迅速なご返信ありがとうございます。",
-
-                "answer": "I appreciate your quick respnce."
-
+                "answer": "accurately",
+                "question": "正確な"
             },
-
             {
-
-                "question": "時間が掛かりますか？",
-
-                "answer": "Does it take do me a little favor?"
-
+                "answer": "instead",
+                "question": "代わりに"
             },
-
             {
-
-                "question": "最悪",
-
-                "answer": "What's next?"
-
+                "answer": "realized",
+                "question": "実現した"
             },
-
             {
-
-                "question": "私は休暇中です。",
-
-                "answer": "I am on leace."
-
+                "answer": "a couple of",
+                "question": "何個かの"
             },
-
             {
-
-                "question": "調査中",
-
-                "answer": "Under investingation"
-
+                "answer": "examine",
+                "question": "調べる"
             },
-
             {
-
-                "question": "経由",
-
-                "answer": "via"
-
+                "answer": "correct",
+                "question": "正しいか"
             },
-
             {
-
-                "question": "解決",
-
-                "answer": "resolve"
-
+                "answer": "exceed ～ by N %",
+                "question": "～をN％超える"
             },
-
             {
-
-                "question": "...の様です。",
-
-                "answer": "It seems ..."
-
+                "answer": "Acoording to this schedule,",
+                "question": "このスケジュールによると"
             },
-
             {
-
-                "question": "念の為申し上げますと、",
-
-                "answer": "Just to be clear,"
-
+                "answer": "room",
+                "question": "余地"
             },
-
             {
-
-                "question": "指摘した部分を修正しました。",
-
-                "answer": "I corrected the pointed outpart."
-
+                "answer": "so",
+                "question": "つまり"
             },
-
             {
-
-                "question": "個人的な意見ですが、",
-
-                "answer": "Just my opinion,"
-
+                "answer": "Let’s work together to see,",
+                "question": "一緒に検討しましょう"
             },
-
             {
-
-                "question": "もしよろしければ",
-
-                "answer": "If  you are ok,"
-
+                "answer": "Don’t you think ～",
+                "question": "～と思いませんか？"
             },
-
             {
-
-                "question": "その通りです",
-
-                "answer": "Exactly"
-
+                "answer": "as we've seen",
+                "question": "すでに見てきたように"
             },
-
             {
-
-                "question": "確認してくれてありがとう",
-
-                "answer": "Thanks for the confirmation."
-
+                "answer": "firm basis",
+                "question": "確かなる根拠"
             },
-
             {
-
-                "question": "コメントをいくつか追加しましたので確認してください。",
-
-                "answer": "I added few comments, please check it."
-
+                "answer": "plus",
+                "question": "その上"
+            },
+            {
+                "answer": "affect",
+                "question": "影響する"
+            },
+            {
+                "answer": "assume",
+                "question": "思われる"
+            },
+            {
+                "answer": "suitable",
+                "question": "適当な"
+            },
+            {
+                "answer": "import",
+                "question": "輸入"
+            },
+            {
+                "answer": "combine",
+                "question": "纏める"
+            },
+            {
+                "answer": "expect",
+                "question": "期待する"
+            },
+            {
+                "answer": "optimal",
+                "question": "最適"
+            },
+            {
+                "answer": "treated to",
+                "question": "として扱われている"
+            },
+            {
+                "answer": "That my have",
+                "question": "可能性がある"
+            },
+            {
+                "answer": "incase",
+                "question": "～のときには"
+            },
+            {
+                "answer": "please let me know",
+                "question": "知らせてください"
+            },
+            {
+                "answer": "introduce yourselves",
+                "question": "自己紹介"
+            },
+            {
+                "answer": "I'd like to ask all of you.",
+                "question": "みなさんにお願いしたいのですが、"
+            },
+            {
+                "answer": "Please take a look at ～",
+                "question": "～を見てください"
+            },
+            {
+                "answer": "define",
+                "question": "期待した"
+            },
+            {
+                "answer": "specification",
+                "question": "スペック"
+            },
+            {
+                "answer": "recommend",
+                "question": "お勧めする"
+            },
+            {
+                "answer": "calorific",
+                "question": "発熱量"
+            },
+            {
+                "answer": "identified",
+                "question": "識別した"
+            },
+            {
+                "answer": "appendix",
+                "question": "別紙"
+            },
+            {
+                "answer": "dicided",
+                "question": "決めた"
+            },
+            {
+                "answer": "When A has been detected,",
+                "question": "Aが検知されたとき"
+            },
+            {
+                "answer": "Points of view",
+                "question": "～の面からも"
+            },
+            {
+                "answer": "not only A but also B",
+                "question": "AだけでなくBも"
+            },
+            {
+                "answer": "reduce",
+                "question": "減らす"
+            },
+            {
+                "answer": "Sounds good",
+                "question": "いいですね"
+            },
+            {
+                "answer": "We are fine",
+                "question": "結構です（ポジティブな意味）"
+            },
+            {
+                "answer": "proposal",
+                "question": "提案"
+            },
+            {
+                "answer": "Suggestion",
+                "question": "提案"
+            },
+            {
+                "answer": "Let me explain why git Repos need.",
+                "question": "なぜGitのReponが必要なのか説明します"
+            },
+            {
+                "answer": "grant",
+                "question": "許可"
+            },
+            {
+                "answer": "existing",
+                "question": "既存の"
+            },
+            {
+                "answer": "empty",
+                "question": "空の"
+            },
+            {
+                "answer": "investigation",
+                "question": "調査"
+            },
+            {
+                "answer": "mention",
+                "question": "記載する"
+            },
+            {
+                "answer": "There is no constraints,",
+                "question": "特に制限はありません"
+            },
+            {
+                "answer": "For our A project,",
+                "question": "私たちのAプロジェクトでは"
+            },
+            {
+                "answer": "Hope your doing well.",
+                "question": "お元気ですか？"
+            },
+            {
+                "answer": "Could you pleae let me know if content is ok or no？",
+                "question": "コンテンツが正しい、または誤りの場合教えてください"
+            },
+            {
+                "answer": "Showing grarbled characters",
+                "question": "文字化け"
+            },
+            {
+                "answer": "resolved issue",
+                "question": "問題が解決した"
+            },
+            {
+                "answer": "Root cause",
+                "question": "根本原因"
+            },
+            {
+                "answer": "good eyes",
+                "question": "お目が高い"
+            },
+            {
+                "answer": "As explained,",
+                "question": "説明の通り"
+            },
+            {
+                "answer": "I think that A network is as follows",
+                "question": "Aのネットワークは以下になると思っています。"
+            },
+            {
+                "answer": "For these resons,",
+                "question": "この様な理由から、"
+            },
+            {
+                "answer": "Let’s tolk about this later.",
+                "question": "後で話をさせてください。"
+            },
+            {
+                "answer": "It is not a problem.",
+                "question": "問題ありません。"
+            },
+            {
+                "answer": "Please countinue on with the process.",
+                "question": "手続きを進めてください。"
+            },
+            {
+                "answer": "For more detail chick here.",
+                "question": "詳細はこちら"
+            },
+            {
+                "answer": "has answered",
+                "question": "答えている"
+            },
+            {
+                "answer": "consider",
+                "question": "考慮する"
+            },
+            {
+                "answer": "configured",
+                "question": "構成"
+            },
+            {
+                "answer": "e.g.",
+                "question": "例えば"
+            },
+            {
+                "answer": "extremely",
+                "question": "極めて"
+            },
+            {
+                "answer": "efficient",
+                "question": "効率的な"
+            },
+            {
+                "answer": "on my side",
+                "question": "私の方では"
+            },
+            {
+                "answer": "assume",
+                "question": "推定"
+            },
+            {
+                "answer": "extremely",
+                "question": "非常に"
+            },
+            {
+                "answer": "distributed",
+                "question": "分散型の"
+            },
+            {
+                "answer": "conclusion",
+                "question": "結論"
+            },
+            {
+                "answer": "specific",
+                "question": "明確な"
+            },
+            {
+                "answer": "ensure",
+                "question": "確認"
+            },
+            {
+                "answer": "dealing",
+                "question": "取引"
+            },
+            {
+                "answer": "asynchronous",
+                "question": "振付"
+            },
+            {
+                "answer": "monolith",
+                "question": "一枚岩の"
+            },
+            {
+                "answer": "Concering",
+                "question": "について"
+            },
+            {
+                "answer": "reduced",
+                "question": "削減"
+            },
+            {
+                "answer": "avoid",
+                "question": "避ける"
+            },
+            {
+                "answer": "whole",
+                "question": "全体"
+            },
+            {
+                "answer": "benefits",
+                "question": "利点"
+            },
+            {
+                "answer": "improvement",
+                "question": "改善"
+            },
+            {
+                "answer": "proteste",
+                "question": "講義"
+            },
+            {
+                "answer": "aware",
+                "question": "承知"
+            },
+            {
+                "answer": "in side of this",
+                "question": "その為には"
+            },
+            {
+                "answer": "One thing we need to do going forword.",
+                "question": "今後の課題としては"
+            },
+            {
+                "answer": "disable",
+                "question": "無効にする"
+            },
+            {
+                "answer": "I’ｍ sorry the late reply.",
+                "question": "返信が遅れてすみません。"
+            },
+            {
+                "answer": "As explained previously",
+                "question": "先に説明した通り"
+            },
+            {
+                "answer": "I will do my best.",
+                "question": "頑張ります"
+            },
+            {
+                "answer": "instead of ～",
+                "question": "～の代わりに"
+            },
+            {
+                "answer": "I assume ...",
+                "question": "私は ... と思われます"
+            },
+            {
+                "answer": "To complement my previous email.",
+                "question": "前回のメールを補足すると"
+            },
+            {
+                "answer": "feach",
+                "question": "取得する"
+            },
+            {
+                "answer": "empower",
+                "question": "権限を与える"
+            },
+            {
+                "answer": "editable",
+                "question": "編集可能"
+            },
+            {
+                "answer": "Improve satisfaction of users",
+                "question": "ユーザの満足度向上"
+            },
+            {
+                "answer": "stay close to our customers",
+                "question": "お客様に寄り添う"
+            },
+            {
+                "answer": "reviwed on my side",
+                "question": "私の方でレビューしました"
+            },
+            {
+                "answer": "implement",
+                "question": "実行する"
+            },
+            {
+                "answer": "It seems",
+                "question": "～のようです"
+            },
+            {
+                "answer": "via",
+                "question": "経由"
+            },
+            {
+                "answer": "under investigation",
+                "question": "調査中"
+            },
+            {
+                "answer": "I am on leave.",
+                "question": "私は休暇中です。"
+            },
+            {
+                "answer": "What's next?",
+                "question": "最悪"
+            },
+            {
+                "answer": "Cloud you do me a little favor？",
+                "question": "ちょっとお願いがあるのですが"
+            },
+            {
+                "answer": "Does it tale a long time?",
+                "question": "時間が掛かりますか？"
+            },
+            {
+                "answer": "I appreciate your quick responce.",
+                "question": "迅速なお返事ありがとうございます"
+            },
+            {
+                "answer": "Thank you for letting me know.",
+                "question": "教えて頂きありがとうございます。"
+            },
+            {
+                "answer": "Let me confirm",
+                "question": "確認します"
+            },
+            {
+                "answer": "Thank you for your confirmation.",
+                "question": "確認して頂きありがとうございます"
+            },
+            {
+                "answer": "Mean while, please find flowing required information..",
+                "question": "一方で、必要な情報は以下の通りです。"
+            },
+            {
+                "answer": "Is the region with DB in Singapore?",
+                "question": "DBのある地域はシンガポールですか？"
+            },
+            {
+                "answer": "I’ｍ sorry for the inconvenience. Thank you for your cooperation.",
+                "question": "お手数をお掛け致しますが、よろしくお願い致します。"
+            },
+            {
+                "answer": "I'm not good at english language.",
+                "question": "私は英語が苦手です。"
+            },
+            {
+                "answer": "Therefore,",
+                "question": "したがって"
+            },
+            {
+                "answer": "Could you please make the following changes?",
+                "question": "以下の変更をお願い致します。"
+            },
+            {
+                "answer": "How about ... ?",
+                "question": "...はどうですか？"
+            },
+            {
+                "answer": "Regarding to ...,",
+                "question": "...について"
+            },
+            {
+                "answer": "If you have confirmation, please let us know.",
+                "question": "ご不明点kがあれば連絡ください"
+            },
+            {
+                "answer": "please go a head.",
+                "question": "続けてください"
+            },
+            {
+                "answer": "Don't mention that.",
+                "question": "どういたしまして。"
+            },
+            {
+                "answer": "First and foremost .",
+                "question": "まずは"
+            },
+            {
+                "answer": "Here is a meeting memo.",
+                "question": "打合せメモです"
+            },
+            {
+                "answer": "In the case,",
+                "question": "その場合"
+            },
+            {
+                "answer": "On the other hand,",
+                "question": "一方で"
+            },
+            {
+                "answer": "I will investigate and inform you.",
+                "question": "確認して連絡します"
+            },
+            {
+                "answer": "Sorry writing in English.",
+                "question": "英語で書いてすみません"
+            },
+            {
+                "answer": "Does this answer your question?",
+                "question": "あなたの質問への答えになっていますか？"
+            },
+            {
+                "answer": "I apologize.",
+                "question": "謝罪します"
+            },
+            {
+                "answer": "How about below question?",
+                "question": "あなたの質問への答えになっていますか？"
+            },
+            {
+                "answer": "You got it .",
+                "question": "了解しました。"
+            },
+            {
+                "answer": "Please kindly find the information below;",
+                "question": "以下の情報をご覧ください。"
+            },
+            {
+                "answer": "Kindly shift A to march 31 st, 2021.",
+                "question": "Aを2021/03/31に変更してください。"
+            },
+            {
+                "answer": "It would be appreciated ...",
+                "question": "頂ければ幸いです。"
+            },
+            {
+                "answer": "I was wondering, ...?",
+                "question": "ちょっと思ったんだけど"
+            },
+            {
+                "answer": "May I ask, how old are you?",
+                "question": "恐れ入りますが、年連を教えてください。"
+            },
+            {
+                "answer": "Sorry for the inconvenience.",
+                "question": "ご迷惑をお掛け致します"
+            },
+            {
+                "answer": "Do you have any update regarding this question?",
+                "question": "この質問について何かupdateはありますか？"
+            },
+            {
+                "answer": "I won't be able to attend tommrow morning because of meeting conflict.",
+                "question": "会議が競合している為、明日の会議には出席できません"
+            },
+            {
+                "answer": "related",
+                "question": "関連している"
+            },
+            {
+                "answer": "Concerning ...",
+                "question": "...に関しては"
+            },
+            {
+                "answer": "retrieval",
+                "question": "取り戻す"
+            },
+            {
+                "answer": "as much as...",
+                "question": "...と同じ程度に"
+            },
+            {
+                "answer": "implemented",
+                "question": "道具"
+            },
+            {
+                "answer": "whatever",
+                "question": "...するのは何でも"
+            },
+            {
+                "answer": "modifying",
+                "question": "変更する"
+            },
+            {
+                "answer": "entire",
+                "question": "全体の"
+            },
+            {
+                "answer": "accordingly",
+                "question": "よって"
+            },
+            {
+                "answer": "tentative",
+                "question": "仮の"
+            },
+            {
+                "answer": "Based on ...",
+                "question": "...をもとに"
+            },
+            {
+                "answer": "also",
+                "question": "また"
+            },
+            {
+                "answer": "asper",
+                "question": "...により"
+            },
+            {
+                "answer": "I can not wait anymore.",
+                "question": "もう待てません"
+            },
+            {
+                "answer": "retrieval method",
+                "question": "取得方法"
+            },
+            {
+                "answer": "period",
+                "question": "期間"
+            },
+            {
+                "answer": "duration",
+                "question": "期間"
+            },
+            {
+                "answer": "clarify",
+                "question": "明確に"
+            },
+            {
+                "answer": "alternative",
+                "question": "代替"
+            },
+            {
+                "answer": "Although",
+                "question": "けれども"
+            },
+            {
+                "answer": "I was taking summer vacation.",
+                "question": "夏休みを取っていました"
+            },
+            {
+                "answer": "Thank you for your cooperation.",
+                "question": "ご対応ありがとうございます。"
+            },
+            {
+                "answer": "I will ket you know if I have any follow-up questions.",
+                "question": "何かフォローが必要な質問があったら連絡してください。"
+            },
+            {
+                "answer": "suggestion",
+                "question": "提案"
+            },
+            {
+                "answer": "extract",
+                "question": "エキスパート"
+            },
+            {
+                "answer": "respective",
+                "question": "それぞれの"
+            },
+            {
+                "answer": "a problem with AAA",
+                "question": "AAAに問題があると"
+            },
+            {
+                "answer": "I added my responses in red.",
+                "question": "赤字で私の回答を記載します。"
+            },
+            {
+                "answer": "above",
+                "question": "上記"
+            },
+            {
+                "answer": "We are facing problem.",
+                "question": "問題に直面している"
+            },
+            {
+                "answer": "suddenly",
+                "question": "突然"
+            },
+            {
+                "answer": "Here is the flow for redirection that we analyzed.",
+                "question": "ここでは、分析したリダイレクトの流れを紹介します。"
+            },
+            {
+                "answer": "As AAA-san mentioned,",
+                "question": "AAAさんの仰る通り、"
+            },
+            {
+                "answer": "Thank you for your confirmation.",
+                "question": "ご確認ありがとうございます。"
+            },
+            {
+                "answer": "concurrent",
+                "question": "同時"
+            },
+            {
+                "answer": "so why not follow the same pattern?",
+                "question": "同じパターンでいいんじゃない？"
+            },
+            {
+                "answer": "sorry but I won't be able to attend today.",
+                "question": "申し訳ありません、今日は参加できません。"
+            },
+            {
+                "answer": "I will make it quick.",
+                "question": "早速作ってみます。"
+            },
+            {
+                "answer": "Thank you for submitting your learning plan. Approved.",
+                "question": "あなたの学習計画のありがとうございます。承認します。"
+            },
+            {
+                "answer": "Please confirm the attached document.",
+                "question": "添付ファイルをご確認ください"
+            },
+            {
+                "answer": "availability",
+                "question": "可用性"
+            },
+            {
+                "answer": "attribute",
+                "question": "属性"
+            },
+            {
+                "answer": "expansion",
+                "question": "拡張"
+            },
+            {
+                "answer": "article",
+                "question": "記事"
+            },
+            {
+                "answer": "description",
+                "question": "説明"
+            },
+            {
+                "answer": "Do you think it will take much longer？",
+                "question": "まだ時間が掛かりますでしょうか。"
+            },
+            {
+                "answer": "Please let me know that current status regarding the below.",
+                "question": "以下について状況を教えて頂けませんでしょうか。"
+            },
+            {
+                "answer": "I will forword the invitation to other member as needed.",
+                "question": "必要に応じて他のメンバーにivitationを転送します。"
+            },
+            {
+                "answer": "Please invite the following member.",
+                "question": "以下の方に案内を会議案内を送ってください。"
+            },
+            {
+                "answer": "The demand has been approved.",
+                "question": "デマンドは承認されています"
+            },
+            {
+                "answer": "experiment",
+                "question": "実験的な"
+            },
+            {
+                "answer": "solved now",
+                "question": "今解決した"
+            },
+            {
+                "answer": "ok for me",
+                "question": "私はOKです"
+            },
+            {
+                "answer": "hire",
+                "question": "雇う"
+            },
+            {
+                "answer": "what went well",
+                "question": "良かったこと"
+            },
+            {
+                "answer": "needs improvemt",
+                "question": "改善点"
+            },
+            {
+                "answer": "Next steps",
+                "question": "解決"
+            },
+            {
+                "answer": "retrospective",
+                "question": "振り返り"
+            },
+            {
+                "answer": "lol",
+                "question": "大笑い"
+            },
+            {
+                "answer": "revocation",
+                "question": "廃止"
+            },
+            {
+                "answer": "aim",
+                "question": "目標"
+            },
+            {
+                "answer": "what kind of",
+                "question": "どの様な"
+            },
+            {
+                "answer": "integrate",
+                "question": "統合する"
+            },
+            {
+                "answer": "implementation",
+                "question": "実行する"
+            },
+            {
+                "answer": "I see.",
+                "question": "なるほど"
+            },
+            {
+                "answer": "definition",
+                "question": "定義"
+            },
+            {
+                "answer": "absent",
+                "question": "不在"
+            },
+            {
+                "answer": "regular intervals",
+                "question": "定期的に"
+            },
+            {
+                "answer": "satisfire",
+                "question": "満足"
+            },
+            {
+                "answer": "spill",
+                "question": "溢れる"
+            },
+            {
+                "answer": "be being p.p",
+                "question": "ppされている途中だ"
+            },
+            {
+                "answer": "have been p.p",
+                "question": "ppされてしまった"
+            },
+            {
+                "answer": "I think so too.",
+                "question": "私もそう思います"
+            },
+            {
+                "answer": "concerns",
+                "question": "懸念"
+            },
+            {
+                "answer": "Please be intarmced of AAA",
+                "question": "AAAをお知らせ致します"
+            },
+            {
+                "answer": "Can you please explain in Japanese?",
+                "question": "日本語で説明してくれますか？"
+            },
+            {
+                "answer": "ignore",
+                "question": "無視する"
+            },
+            {
+                "answer": "it looks like working.",
+                "question": "動作しているように見えます"
+            },
+            {
+                "answer": "We have not made any changes.",
+                "question": "私たちは何も変更を行っていないです"
+            },
+            {
+                "answer": "I'm off will be back on September 28th.",
+                "question": "私は、9/28に戻ります"
+            },
+            {
+                "answer": "For AAA, you may contact : BBB",
+                "question": "AAAについては、BBBに連絡してください"
+            },
+            {
+                "answer": "Purpose",
+                "question": "目的"
+            },
+            {
+                "answer": "OK,noted,",
+                "question": "分かりました。（了解しました）"
+            },
+            {
+                "answer": "AAA will be managed by you.",
+                "question": "AAAはあなたが管理します。"
+            },
+            {
+                "answer": "I joined,",
+                "question": "参加しました。（アクセスしました）"
+            },
+            {
+                "answer": "As you said I probably need the admin access to AAA / BBB the token access.",
+                "question": "おっしゃるとおり、トークンのアクセスをAAA/BBBにするためには、おそらく管理者権限が必要です。"
+            },
+            {
+                "answer": "Please give me the power.",
+                "question": "どうかご協力をお願いします。"
+            },
+            {
+                "answer": "be full of",
+                "question": "いっぱいになっている"
+            },
+            {
+                "answer": "ladder",
+                "question": "ハシゴ"
+            },
+            {
+                "answer": "drawer",
+                "question": "引き出し"
+            },
+            {
+                "answer": "potted plamts",
+                "question": "鉢植え"
+            },
+            {
+                "answer": "be situated",
+                "question": "置かれている"
+            },
+            {
+                "answer": "be being 過去分詞",
+                "question": "～されているところ"
+            },
+            {
+                "answer": "a bunch of flowers",
+                "question": "花束"
+            },
+            {
+                "answer": "trimmed",
+                "question": "手入れ"
+            },
+            {
+                "answer": "decided",
+                "question": "明白な"
+            },
+            {
+                "answer": "Based on the security constrains",
+                "question": "セキュリティ上の制約から"
+            },
+            {
+                "answer": "adopted",
+                "question": "採用"
+            },
+            {
+                "answer": "at that time",
+                "question": "当時の"
+            },
+            {
+                "answer": "the only realistic one",
+                "question": "唯一の現実的な"
+            },
+            {
+                "answer": "Concerning",
+                "question": "～について"
+            },
+            {
+                "answer": "feasible",
+                "question": "実行できる"
+            },
+            {
+                "answer": "won't be so complex",
+                "question": "それほど複雑ではない"
+            },
+            {
+                "answer": "fact",
+                "question": "事実"
+            },
+            {
+                "answer": "for to be perfect",
+                "question": "完璧にはほど遠い"
+            },
+            {
+                "answer": "most of the time",
+                "question": "ほとんどの場合"
+            },
+            {
+                "answer": "enough",
+                "question": "十分"
+            },
+            {
+                "answer": "in this case",
+                "question": "この場合"
+            },
+            {
+                "answer": "introspection",
+                "question": "自己反省"
+            },
+            {
+                "answer": "verify",
+                "question": "確かめる"
+            },
+            {
+                "answer": "be unoccuppied",
+                "question": "空いている"
+            },
+            {
+                "answer": "over an overpass",
+                "question": "陸橋"
+            },
+            {
+                "answer": "a row of",
+                "question": "一列に並んだ"
+            },
+            {
+                "answer": "is being written",
+                "question": "書かれている最中です"
+            },
+            {
+                "answer": "by",
+                "question": "そばに"
+            },
+            {
+                "answer": "tram",
+                "question": "路面電車"
+            },
+            {
+                "answer": "is packed",
+                "question": "いっぱいである"
+            },
+            {
+                "answer": "have been stacked",
+                "question": "積み重ねられている"
+            },
+            {
+                "answer": "Thank you for taking the time to reply me.",
+                "question": "お忙しい中返信頂きありがとうございます。"
             }
+
         ]
 
 
         //回答確認メソッド
         function check(value) {
-            const answer = document.getElementById("answer").value;
+            const answer = document.getElementById("question").value;
 
             if (answer.toUpperCase() === value.toUpperCase()) {
                 document.getElementById('sound-file-ok').play();
@@ -460,7 +1290,7 @@
             var questionword = json[arrayIndex].question;
             var answerword = json[arrayIndex].answer;
             var element = document.getElementById('questions');
-            element.innerHTML = questionword + '</br><input type="text" id="answer" value="" maxlength="100" /></br>';
+            element.innerHTML = questionword + '</br><input type="text" id="question" value="" maxlength="100" /></br>';
             var elem = document.getElementById("btn_check");
             elem.innerHTML = '<p id="btn"' + '" onclick="check(\'' + answerword + '\')"> check </p>';
             var elem = document.getElementById("btn_list");
@@ -485,10 +1315,11 @@
             var element = document.getElementById('list');
             var listtext = '';
 
-            for(let i = 0; i < json.length; i++){
-                var questionword = json[i].question;
-                var answerword = '<span id ="listanswer">' + json[i].answer + '</span>';
-                listtext = listtext + questionword + ' : ' + answerword + '</br>';
+            for (let i = 0; i < json.length; i++) {
+                var questionword = '<span>' + json[i].question + '</span>';
+                var answerword = '<span class ="listanswer">' + json[i].answer + '</span>';
+                // listtext = listtext + questionword + ' : ' + answerword + '</br>';
+                listtext = listtext + '<p onclick = voice(document.getElementsByClassName("listanswer")['+ i +'].textContent)>' + questionword + ' : ' + answerword + '</p>';
             }
             element.innerHTML = listtext;
 
